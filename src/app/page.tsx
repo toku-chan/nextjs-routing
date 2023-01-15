@@ -17,6 +17,11 @@ export default function Home() {
               app/pageが存在するとき、pagesディレクトリにindex.tsxを作成したら、ルーティングはどうなるのか？
             </Link>
           </li>
+          <li>
+            <Link href="/dynamic/">
+              動的ルート
+            </Link>
+          </li>
         </ul>
       </section>
     </main>

@@ -13,7 +13,7 @@ export default function DynamicRouting() {
           動的に作られるページ<br />
           モックデータを準備してidを元にページの生成をする
         </p>
-        {/* TODO: 次回やること
+        {/* TODO: 2023/01/16(月)
           * * 動的ルートを作成するためにモックデータを作成
           * * JSONデータで、構成は {id: number, title: string, text: string} でやってみる
          */}

@@ -14,7 +14,7 @@ export default function Home() {
         <ul>
           <li>
             <Link href="/test-index">
-              app/pageが存在するとき、pagesディレクトリにondex.tsxを作成したら、ルーティングはどうなるのか？
+              app/pageが存在するとき、pagesディレクトリにindex.tsxを作成したら、ルーティングはどうなるのか？
             </Link>
           </li>
         </ul>

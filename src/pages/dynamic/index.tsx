@@ -1,6 +1,27 @@
 import { Layout } from "@/components/Layout";
 
-export default function DynamicRouting() {
+type Props = {
+  data: {
+    posts: {
+      id: number;
+      title: string;
+      text: string;
+    }[]
+  }
+}
+
+export const getStaticProps = async() => {
+  const response = await fetch('http://localhost:3000/api/mockData');
+  const data = await response.json();
+
+  return {
+    props: {
+      data
+    }
+  }
+}
+
+export default function DynamicRouting({ data }: Props) {
   return (
     <Layout>
       <section>
@@ -13,10 +34,14 @@ export default function DynamicRouting() {
           動的に作られるページ<br />
           モックデータを準備してidを元にページの生成をする
         </p>
-        {/* TODO: 2023/01/16(月)
-          * * 動的ルートを作成するためにモックデータを作成
-          * * JSONデータで、構成は {id: number, title: string, text: string} でやってみる
-         */}
+        <ul>
+          {data.posts.map((item) => (
+            <li key={item.id}>
+              <p>{item.title}</p>
+              <p>{item.text}</p>
+            </li>
+          ))}
+        </ul>
       </section>
     </Layout>
   )

@@ -2,6 +2,7 @@
 import Link from "next/link";
 
 export const getStaticPaths = async() => {
+  // https://jsonplaceholder.typicode.com/
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
   const data = await response.json();
 
@@ -25,7 +26,10 @@ export const getStaticPaths = async() => {
 // context.locale = 有効なlocaleが含まれている（有効な場合） ← locale が有効な時ってなに？
 // context.locales = サポートされているlocale全てが含まれている（有効な場合） ← locale が有効な時ってなに？
 // context.defaultLocale = 構成されたlocaleが含まれている（有効な場合） ← locale が有効な時ってなに？
+
+// https://nextjs.org/docs/api-reference/data-fetching/get-static-props
 export const getStaticProps = async(ctx) => {
+  // https://jsonplaceholder.typicode.com/
   const response = await fetch(`https://jsonplaceholder.typicode.com/users/${ctx.params.id}`);
   const data = await response.json();
 

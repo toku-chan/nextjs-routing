@@ -22,6 +22,11 @@ export default function Home() {
               動的ルート
             </Link>
           </li>
+          <li>
+            <Link href="/user-root">
+              動的ルート（ディレクトリ編）
+            </Link>
+          </li>
         </ul>
       </section>
     </main>
